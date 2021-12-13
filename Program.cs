@@ -49,7 +49,6 @@ namespace PraktikumWeek14
             {
                 Console.Write("Input : ");
                 var N = Convert.ToInt32(Console.ReadLine());
-                Console.Clear();
 
                 Console.WriteLine("Output : ");
                 for (int i = 1; i <= N * N; i++)
