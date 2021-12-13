@@ -60,7 +60,7 @@ namespace PraktikumWeek14
                     else
                         Console.Write(String.Format("{0,6}", bilBukanPrimaKe(i)));
                 }
-
+                Console.WriteLine("\n");
             }
         }
     }
