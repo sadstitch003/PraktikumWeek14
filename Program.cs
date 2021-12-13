@@ -42,7 +42,6 @@ namespace PraktikumWeek14
             return bilangan;
         }
 
-
         static void Main(string[] args)
         {
             while (true)
