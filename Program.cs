@@ -18,6 +18,7 @@ namespace PraktikumWeek14
         {
             var counter = 0;
             var bilangan = 0;
+
             while (counter < i)
             {
                 bilangan++;
@@ -31,6 +32,7 @@ namespace PraktikumWeek14
         {
             var counter = 0;
             var bilangan = 0;
+
             while (counter < i)
             {
                 bilangan++;
@@ -39,18 +41,7 @@ namespace PraktikumWeek14
             }
             return bilangan;
         }
-        public static void cetakPrima()
-        {
-            for (int i = 1; i <= N * N; i++)
-                if (i % N == 1) Console.WriteLine();
-                    Console.Write(String.Format("{0,6}", bilPrimaKe(i)));
-        }
-        public static void cetakBukanPrima()
-        {
-            for (int i = 1; i <= N * N; i++)
-                if (i % N == 1) Console.WriteLine();
-                    Console.Write(String.Format("{0,6}", bilPrimaKe(i)));
-        }
+
 
         static void Main(string[] args)
         {
@@ -60,9 +51,14 @@ namespace PraktikumWeek14
                 var N = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Output : ");
-                if (adalahPrima(N)) cetakPrima();
-                else cetakBukanPrima();
-
+                for (int i = 1; i <= N * N; i++)
+                {
+                    if (i % N == 1) Console.WriteLine();
+                    if (adalahPrima(N))
+                        Console.Write(String.Format("{0,6}", bilPrimaKe(i)));
+                    else
+                        Console.Write(String.Format("{0,6}", bilBukanPrimaKe(i)));
+                }
                 Console.WriteLine("\n");
             }
         }
