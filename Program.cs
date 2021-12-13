@@ -18,7 +18,6 @@ namespace PraktikumWeek14
         {
             var counter = 0;
             var bilangan = 0;
-
             while (counter < i)
             {
                 bilangan++;
@@ -32,7 +31,6 @@ namespace PraktikumWeek14
         {
             var counter = 0;
             var bilangan = 0;
-
             while (counter < i)
             {
                 bilangan++;
