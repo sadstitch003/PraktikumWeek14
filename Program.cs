@@ -4,20 +4,22 @@ namespace PraktikumWeek14
 {
     internal class Program
     {
+        public static int bilTerakhir = 0;
+        public static int bilKe = 0;
+
         public static bool adalahPrima(int bil)
         {
-            var jumlahFaktor = 0;
-            for (int i = 1; i <= bil; i++)
-                if (bil % i == 0) jumlahFaktor++;
+            if (bil == 1) return true;
+            for (int i = 2; i <= Math.Sqrt(bil); i++)
+                if (bil % i == 0) return true;
 
-            if (jumlahFaktor == 2) return true;
-            else return false;
+            return false;
         }
 
         public static int bilPrimaKe(int i)
         {
-            var counter = 0;
-            var bilangan = 0;
+            var counter = bilKe;
+            var bilangan = bilTerakhir;
 
             while (counter < i)
             {
@@ -25,13 +27,16 @@ namespace PraktikumWeek14
                 if (adalahPrima(bilangan))
                     counter++;
             }
+
+            bilKe = i;
+            bilTerakhir = bilangan;
             return bilangan;
         }
 
         public static int bilBukanPrimaKe(int i)
         {
-            var counter = 0;
-            var bilangan = 0;
+            var counter = bilKe;
+            var bilangan = bilTerakhir;
 
             while (counter < i)
             {
@@ -39,14 +44,19 @@ namespace PraktikumWeek14
                 if (adalahPrima(bilangan) == false)
                     counter++;
             }
+
+            bilKe = i;
+            bilTerakhir = bilangan;
             return bilangan;
         }
-
 
         static void Main(string[] args)
         {
             while (true)
             {
+                bilTerakhir = 0;
+                bilKe = 0;
+
                 Console.Write("Input : ");
                 var N = Convert.ToInt32(Console.ReadLine());
 
